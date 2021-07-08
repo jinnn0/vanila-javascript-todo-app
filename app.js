@@ -77,6 +77,17 @@ function completeOrDelete(e) {
 function filterTodos(e) {
   const target = e.target;
   const todos = todoList.childNodes;
+  const buttons = [...filterBtns.children];
+
+  let prveButton = buttons.find((btn) => btn.classList.contains('clicked')) || null;
+
+  // Remove styles from previously clicked button
+  if (prveButton) {
+    prveButton.classList.remove('clicked');
+  }
+
+  // Add styles to the currently clicked button
+  target.classList.add('clicked');
 
   todos.forEach((todo) => {
     switch (target.classList[0]) {
@@ -98,12 +109,12 @@ function filterTodos(e) {
 
       case 'all':
         todo.style.display = 'flex';
-
         break;
     }
   });
 }
 
+// LocalStorage
 function saveToLocalStorage(todo) {
   const todos = JSON.parse(localStorage.getItem('todos')) || [];
 
