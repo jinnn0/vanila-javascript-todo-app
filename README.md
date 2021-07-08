@@ -12,3 +12,7 @@ Simple vanila javaScript project to cover simple DOM manipulations.
 
 - Retrieving data from local storage
 - Setting data to the local sotrage
+
+#### CSS animation
+
+- CSS sliding out animation
