@@ -24,7 +24,8 @@ function addTodo(e) {
   // If value is empty, return
   if (value.length === 0) return;
 
-  const todo = { id: ++todos.length, task: value, completed: false };
+  const id = Date.now();
+  const todo = { id: id, task: value, completed: false };
 
   saveToLocalStorage(todo);
   displayTodo(todo);
@@ -65,7 +66,7 @@ function completeOrDelete(e) {
     case 'complete-btn':
       todo.classList.toggle('completed');
 
-      updateLocalStorage(id);
+      updateLocalStorageComplete(id);
       break;
 
     case 'delete-btn':
@@ -73,6 +74,8 @@ function completeOrDelete(e) {
       todo.addEventListener('transitionend', () => {
         todo.remove();
       });
+
+      updateLocalStorageDelete(id);
 
       break;
   }
@@ -130,7 +133,7 @@ function saveToLocalStorage(todo) {
   localStorage.setItem('todos', JSON.stringify(todos));
 }
 
-function updateLocalStorage(id) {
+function updateLocalStorageComplete(id) {
   const todos = JSON.parse(localStorage.getItem('todos')) || [];
   const newTodos = todos.map((todo) => {
     if (todo.id === id) {
@@ -139,6 +142,13 @@ function updateLocalStorage(id) {
 
     return todo;
   });
+
+  localStorage.setItem('todos', JSON.stringify(newTodos));
+}
+
+function updateLocalStorageDelete(id) {
+  const todos = JSON.parse(localStorage.getItem('todos')) || [];
+  const newTodos = todos.filter((todo) => todo.id != id);
 
   localStorage.setItem('todos', JSON.stringify(newTodos));
 }
