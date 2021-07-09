@@ -17,16 +17,8 @@ Simple vanila javaScript project to cover simple DOM manipulations.
 
 - CSS sliding out animation
 
-## Screenshots
+#### Screenshots
 
-<br/><br/>
 ![screenshot 1](screenshots/screenshot-1.png)
-
-<br/><br/>
 ![screenshot 2](screenshots/screenshot-2.png)
-
-<br/><br/>
 ![screenshot 3](screenshots/screenshot-3.png)
-
-<br/><br/>
-![screenshot 4](screenshots/screenshot-4.png)
