@@ -28,15 +28,16 @@ body {
 }
 
 .form-container {
-  margin-bottom: 3.5rem;
+  margin-bottom: 4.5rem;
 }
 
 form {
   width: 100%;
   display: flex;
   align-items: center;
+  padding: 4px 0;
   padding-left: 28px;
-  border-radius: 20px;
+  border-radius: 25px;
   box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -44,7 +45,7 @@ form input {
   flex: 1;
   border: none;
   background-color: transparent;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 3;
   outline: none;
@@ -54,9 +55,9 @@ form button {
   width: 60px;
   height: 75%;
   border: none;
-  border-radius: 17px;
+  border-radius: 25px;
   background-color: rgb(89, 82, 243);
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   margin-right: 15px;
   color: white;
 }
@@ -73,10 +74,10 @@ form button:hover {
 .todo-item {
   display: flex;
   align-items: center;
-  padding: 0 28px;
+  padding: 2px 28px;
   margin-bottom: 15px;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.23s ease-in-out;
 }
 
@@ -92,7 +93,7 @@ form button:hover {
 .task {
   flex: 1;
   overflow-x: hidden;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   margin-bottom: 4px;
   letter-spacing: 0.36px;
